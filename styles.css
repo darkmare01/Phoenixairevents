@@ -63,7 +63,7 @@ header nav ul li a:hover {
 
 
 /* Media Queries for smaller screens */
-@media (max-width: 268px) {
+@media (max-width: 168px) {
     header .container {
         flex-direction: column;
         align-items: flex-start;
