@@ -12,12 +12,11 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
-
-
 /* Header */
+
 header {
     background: rgba(0, 0, 0, 0.9);
     color: #fff;
@@ -62,41 +61,15 @@ header nav ul li a:hover {
     color: #e50914;
 }
 
-
-
-/* Media Queries for smaller screens */
-@media (max-width: 68px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header .logo-small {
-        margin-bottom: 10px;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    header nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    header nav ul li a {
-        font-size: 18px;
-    }
+.menu-icon {
+    display: none; /* Hide the hamburger icon by default */
 }
-
 
 /* Sections */
 section {
     padding: 60px 0;
     background-color: #141414;
     color: #e0e0e0;
-    
 }
 
 section h1 {
@@ -185,7 +158,6 @@ section p {
     border-radius: 5px;
     color: #e0e0e0;
     border-left: 5px solid #e50914;
-    
 }
 
 #services .service img {
@@ -197,13 +169,11 @@ section p {
 #services .service h3 {
     color: #e50914;
     margin-bottom: 10px;
-    
 }
 
 #services .service h4 {
     color: #e50914;
     margin-bottom: 10px;
-    
 }
 
 #services .service ul {
@@ -251,7 +221,8 @@ section p {
     text-align: left;
 }
 
-#contact form input, #contact form textarea {
+#contact form input,
+#contact form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #2c2c2c;
@@ -299,4 +270,129 @@ footer .social-links a {
 
 footer .social-links a:hover {
     color: #fff;
+}
+
+
+@media screen and (max-width: 780px){
+    
+
+    /* General Styles */
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        background-color: #141414;
+        color: #e0e0e0;
+        text-align: center;
+    }
+    
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+        max-width: 1200px; /* Limit maximum width of the container */
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    
+    /* Header */
+    
+    header {
+        background: rgba(0, 0, 0, 0.9);
+        color: #fff;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: background 0.3s;
+        height: 90px;
+    }
+    
+    header .logo-small img {
+        height: 60px;
+    }
+    
+    header .container {
+        display: flex;
+        justify-content: space-between; /* Separate logo and nav */
+        align-items: center;
+    }
+    
+    header nav ul {
+        /* list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; */
+        display: none;
+    }
+    
+    header nav ul li {
+        margin-left: 10px;
+    }
+    
+    header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    header nav ul li a:hover {
+        color: #e50914;
+    }
+    
+    }
+    
+
+/* Responsive Styles */
+@media (max-width: 780px) {
+    /* Show the hamburger icon and hide the navigation menu */
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .container {
+        width: 95%; /* Adjust container width for smaller screens */
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column; /* Change the direction to column */
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9); /* Add a background color */
+        position: fixed; /* Make the navigation menu fixed */
+        top: 90px; /* Adjust the top position */
+        left: 0; /* Align to the left */
+        padding: 10px 0; /* Add padding */
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        color: #fff; /* Set text color */
+        padding: 10px 20px; /* Add padding */
+        display: block; /* Ensure each link takes full width */
+        text-align: center; /* Center align text */
+        transition: background-color 0.3s; /* Add transition */
+    }
+
+    header nav ul li a:hover {
+        background-color: #e50914; /* Change background color on hover */
+    }
+
+    header .logo-small {
+        margin-bottom: 10px;
+    }
 }
