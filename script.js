@@ -4,11 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to toggle the display of the navigation menu
     function toggleNavMenu() {
-        if (navMenu.style.display === "block") {
-            navMenu.style.display = "none";
-        } else {
-            navMenu.style.display = "block";
-        }
+        navMenu.classList.toggle("nav-open");
     }
 
     // Event listener for the menu icon click
@@ -19,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Check if the screen width is less than or equal to 780px (small screen)
         if (window.innerWidth <= 780) {
             // Hide the navigation menu when scrolling
-            navMenu.style.display = "none";
+            navMenu.classList.remove("nav-open");
         }
     });
 });
